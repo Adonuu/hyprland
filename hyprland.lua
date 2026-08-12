@@ -49,7 +49,7 @@ local menu        = "hyprlauncher"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
-   hl.exec_cmd("noctalia")
+   hl.exec_cmd("env -u HL_INITIAL_WORKSPACE_TOKEN noctalia")
    hl.exec_cmd("hypridle")
  end)
 
