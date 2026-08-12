@@ -64,6 +64,8 @@ hl.env("XCURSOR_THEME", "breeze_cursors")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "breeze_cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("QT_QPA_PLATFORMTHEME", "kde")
+hl.env("QT_PLUGIN_PATH", "/etc/profiles/per-user/adam/lib/qt-6/plugins:/run/current-system/sw/lib/qt-6/plugins")
 
 
 -----------------------
@@ -93,7 +95,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 5,
+        gaps_out = 10,
 
         border_size = 2,
 
@@ -112,7 +114,7 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 5,
+        rounding       = 10,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
