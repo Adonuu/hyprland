@@ -290,6 +290,18 @@ end
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
+-- Spotify special workspace
+hl.window_rule({
+    name      = "spotify-special",
+    match     = { class = "^(?i:spotify)$" },
+    workspace = "special:spotify",
+})
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd(
+    "pgrep -x spotify >/dev/null || spotify &"
+    .. " hyprctl dispatch 'hl.dsp.workspace.toggle_special(\"spotify\")'"
+))
+hl.bind(mainMod .. " + SHIFT + ALT + S", hl.dsp.window.move({ workspace = "special:spotify" }))
+
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
