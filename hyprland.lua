@@ -37,6 +37,7 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "noctalia msg panel-toggle launcher"
+local browser     = "zen"
 
 
 -------------------
@@ -270,7 +271,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + B", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Move focus with vim bindings
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
